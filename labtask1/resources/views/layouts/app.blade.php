@@ -7,6 +7,15 @@
     <title>FooBar Company</title>
 </head>
 <body>
+    <div>
+        <ul>
+            <li><a href="{{route('index')}}">Home</a></li>
+            <li><a href="{{route('products')}}">Our Products</a></li>
+            <li><a href="{{route('our-team')}}">Our Team</a></li>
+            <li><a href="{{route('about-us')}}">About Us</a></li>
+            <li><a href="{{route('contact-us')}}">Contact Us</a></li>
+        </ul>
+    </div>
     @yield('body')
 </body>
 </html>

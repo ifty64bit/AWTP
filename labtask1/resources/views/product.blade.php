@@ -3,15 +3,11 @@
 <div>
     Our product list
     <ul>
+        @foreach ($names as $name)
         <li>
-            AK-47
+            {{ $name }}
         </li>
-        <li>
-            M4 A1
-        </li>
-        <li>
-            M4 CQB
-        </li>
+        @endforeach
     </ul>
 </div>
 @endsection

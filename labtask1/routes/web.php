@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PageController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,13 +16,12 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('index');
-});
+})->name('index');
 
-Route::get('/products', function () {
-    return view('product');
-});
+Route::get('/products', [PageController::class,'products'])->name('products');
 
-Route::get('/ourteam', function () {
-    $names = array("Ifty Islam", "Goblin", "Voodoo", "Rabit", "Jimmy");
-    return view('ourteams')->with('names',$names);
-});
+Route::get('/ourteam', [PageController::class, 'ourTeams'])->name('our-team');
+
+Route::get('/aboutus', [PageController::class, 'aboutUs'])->name('about-us');
+
+Route::get('/contactus', [PageController::class, 'contactUs'])->name('contact-us');
