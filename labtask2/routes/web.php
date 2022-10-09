@@ -23,7 +23,9 @@ Route::get('/contact', function(){
 })->name('contact');
 
 Route::controller(UserController::class)->group(function(){
-    Route::get('/login','login')->name('login');
+    Route::get('/login','getLogin')->name('login');
+    Route::post('/login','login')->name('postLogin');
 
-    Route::get('/registration','registration')->name('registration');
+    Route::get('/registration','getRegistration')->name('registration');
+    Route::post('/registration', 'registration')->name('postRegistration');
 });
